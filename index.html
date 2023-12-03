@@ -266,34 +266,25 @@
 
 
   <!-- New Communication Section -->
-<section class="admin-section">
-    <div class="admin-container">
-        <!-- Buttons -->
-        <div class="admin-buttons">
-            <!-- Add buttons to initiate auth sequence and sign out -->
-            <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-            <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
-        </div>
+  <p>Admin Login</p>
+    <!-- Add buttons to initiate auth sequence and sign out -->
+    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
 
-        <!-- Boxes -->
-        <div class="admin-boxes">
-            <div class="admin-box">
-                <h3>SMS Box</h3>
-                <div id="smsBox" style="white-space: pre-wrap;"></div>
-            </div>
-
-            <div class="admin-box">
-                <h3>Messenger Box</h3>
-                <div id="messengerBox" style="white-space: pre-wrap;"></div>
-            </div>
-
-            <div class="admin-box">
-                <h3>Gmail Box</h3>
-                <div id="gmailBox" style="white-space: pre-wrap;"></div>
-            </div>
-        </div>
+    <div>
+      <h3>SMS Box</h3>
+      <div id="smsBox" style="white-space: pre-wrap;"></div>
     </div>
-</section>
+
+    <div>
+      <h3>Messenger Box</h3>
+      <div id="messengerBox" style="white-space: pre-wrap;"></div>
+    </div>
+
+    <div>
+      <h3>Gmail Box</h3>
+      <div id="gmailBox" style="white-space: pre-wrap;"></div>
+    </div>
 
     <script type="text/javascript">
       /* exported gapiLoaded */
