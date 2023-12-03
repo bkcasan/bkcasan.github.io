@@ -538,3 +538,35 @@ header.sticky{
     .admin-box {
         width: 100%;
     }
+/* Add the following styles at the end of admin-section.css */
+
+#authorize-signout-box {
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(193, 202, 206);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#authorize-signout-box:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+
+#authorize-signout-box h3 {
+    font-size: var(--h3-font);
+    color: var(--text-color);
+}
+
+#authorize-signout-box button {
+    margin-top: 10px;
+}
+
+/* Adjust responsive styles if needed */
+@media only screen and (max-width: 768px) {
+    #authorize-signout-box {
+        width: 100%;
+    }
+}
