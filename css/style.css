@@ -497,19 +497,6 @@ header.sticky{
     align-items: center;
     flex-wrap: wrap;
 }
-
-.boxs {
-    width: 30%; /* Adjust the width as needed */
-    padding: 20px;
-    margin: 10px;
-    background-color: rgb(193, 202, 206) 88, 65;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-}
-/* Add this to your existing CSS or create a new CSS file */
-
-/* Communication Boxes Section */
 .admin-section {
     display: flex;
     justify-content: space-around;
@@ -519,7 +506,7 @@ header.sticky{
 }
 
 .admin-box {
-    width: 30%; /* Adjust the width as needed */
+    width: 30%;
     padding: 20px;
     margin: 10px;
     background-color: rgb(193, 202, 206);
@@ -529,30 +516,25 @@ header.sticky{
     transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect for the boxes */
 .admin-box:hover {
     transform: translateY(-5px) scale(1.03);
 }
 
-/* Adjust the font size and color as needed */
 .admin-box h3 {
     font-size: var(--h3-font);
     color: var(--text-color);
 }
 
-/* Adjust the font size and color for box content */
 .admin-box div {
     font-size: var(--p-font);
     color: var(--other-color);
 }
 
-/* Responsive design for smaller screens */
 @media only screen and (max-width: 768px) {
     .admin-section {
         padding: 40px 8%;
     }
 
     .admin-box {
-        width: 100%; /* Take full width on smaller screens */
+        width: 100%;
     }
-}
