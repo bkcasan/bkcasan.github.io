@@ -512,6 +512,22 @@ header.sticky{
 
 #smsBox,
 #messengerBox,
+#gmailBox,
+#content {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.admin-boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+#smsBox,
+#messengerBox,
 #gmailBox {
   flex: 1;
   background-color: #ffffff;
@@ -519,7 +535,7 @@ header.sticky{
   padding: 15px;
   border-radius: 8px;
   color: #000000;
-  margin: 10px; /* Adjust as needed for spacing */
+  margin: 10px;
   max-height: 300px;
   overflow-y: auto;
 }
@@ -570,4 +586,5 @@ header.sticky{
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 
