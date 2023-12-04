@@ -575,9 +575,9 @@ header.sticky{
         flex-direction: column; /* Stack buttons vertically on smaller screens */
     }
 
-    .authorize-btn,
+ .authorize-btn,
     .sign-out-btn {
         width: 100%; /* Full width for buttons on smaller screens */
-        margin-top: 20px; /* Add margin between buttons on smaller screens */
+        margin-top: 20px !important;
+        padding: 50% !important;/* Add margin between buttons on smaller screens */
     }
-}
