@@ -503,6 +503,7 @@ header.sticky{
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    position: left
 }
 
 .admin-box:hover {
