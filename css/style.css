@@ -546,6 +546,8 @@ header.sticky{
     font-size: 15px;
     font-weight: 600;
     transition: all 0.5s ease;
+    margin-top: 20px;
+    
 }
 
 .authorize-btn:hover,
@@ -568,6 +570,6 @@ header.sticky{
     .authorize-btn,
     .sign-out-btn {
         width: 100%; /* Full width for buttons on smaller screens */
-        margin-top: 10px; /* Add margin between buttons on smaller screens */
+        margin-top: 20px; /* Add margin between buttons on smaller screens */
     }
 }
