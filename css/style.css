@@ -507,18 +507,7 @@ header.sticky{
 
 .admin-boxes {
   display: flex;
-  justify-content: space-between; /* Adjust as needed for spacing */
-}
-
-#smsBox,
-#messengerBox,
-#gmailBox,
-#content {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  justify-content: space-between;
 }
 
 #smsBox,
@@ -555,6 +544,33 @@ header.sticky{
   cursor: pointer;
   border-radius: 5px;
 }
+
+#authorize_button:hover,
+#signout_button:hover {
+  background-color: #2980b9;
+}
+
+/* Additional styling for the admin login section */
+#content {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Center the entire section */
+.contact {
+  text-align: center;
+}
+
+/* Style the "Admin Login" text */
+.contact p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 
 #authorize_button:hover,
 #signout_button:hover {
