@@ -264,35 +264,26 @@
     </div>
   </section>
 
-  <!-- Admin Section -->
-<div class="admin-container">
-    <!-- Authorization buttons -->
-    <div class="auth-buttons">
-        <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-        <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+ <p>Admin Login</p>
+    <!-- Add buttons to initiate auth sequence and sign out -->
+    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+
+    <div>
+      <h3>SMS Box</h3>
+      <div id="smsBox" style="white-space: pre-wrap;"></div>
     </div>
 
-    <!-- Messages Boxes Container -->
-    <div class="messages-container">
-        <!-- SMS Box -->
-        <div id="smsBox" class="message-box">
-            <h3>SMS Box</h3>
-            <!-- Content for SMS Box -->
-        </div>
-
-        <!-- Messenger Box -->
-        <div id="messengerBox" class="message-box">
-            <h3>Messenger Box</h3>
-            <!-- Content for Messenger Box -->
-        </div>
-
-        <!-- Gmail Box -->
-        <div id="gmailBox" class="message-box">
-            <h3>Gmail Box</h3>
-            <!-- Content for Gmail Box -->
-        </div>
+    <div>
+      <h3>Messenger Box</h3>
+      <div id="messengerBox" style="white-space: pre-wrap;"></div>
     </div>
-</div>
+
+    <div>
+      <h3>Gmail Box</h3>
+      <div id="gmailBox" style="white-space: pre-wrap;"></div>
+    </div>
+
     <script type="text/javascript">
       /* exported gapiLoaded */
       /* exported gisLoaded */
@@ -464,7 +455,7 @@
     <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
 
   </main><!-- End #main -->
-
+    
     
 <!-- Add this script tag to your HTML, preferably just before the closing </body> tag -->
 <script>
