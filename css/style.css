@@ -505,16 +505,21 @@ header.sticky{
   background-color: #f9f9f9;
 }
 
+.admin-boxes {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed for spacing */
+}
+
 #smsBox,
 #messengerBox,
 #gmailBox {
-  width: calc(33.33% - 20px); /* Adjust the width for each box and consider margins */
-  margin: 10px;
+  flex: 1;
   background-color: #ffffff;
   border: 1px solid #ced4da;
   padding: 15px;
   border-radius: 8px;
   color: #000000;
+  margin: 10px; /* Adjust as needed for spacing */
   max-height: 300px;
   overflow-y: auto;
 }
