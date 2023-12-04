@@ -336,12 +336,12 @@
 
         <div>
             <h3>MESSENGER</h3>
-            <div id="messengerBox" style="white-space: pre-wrap;"></div>
+            <div id="messenger" style="white-space: pre-wrap;"></div>
         </div>
 
         <div>
-            <h3>Gmail Box</h3>
-            <div id="gmailBox" style="white-space: pre-wrap;"></div>
+            <h3>GMAIL</h3>
+            <div id="gmail" style="white-space: pre-wrap;"></div>
         </div>
     </div>
 </div>
@@ -479,8 +479,8 @@
 
         // Clear existing content in boxes
         document.getElementById('sms').innerText = '';
-        document.getElementById('messengerBox').innerText = '';
-        document.getElementById('gmailBox').innerText = '';
+        document.getElementById('messenger').innerText = '';
+        document.getElementById('gmail').innerText = '';
 
         // Fetch and display message content
         for (const message of messages) {
@@ -504,9 +504,9 @@
             if (toAddress.includes('SMS') || subject.includes('SMS')) {
               document.getElementById('sms').innerText += messageText;
             } else if (toAddress.includes('Facebook') || subject.includes('Facebook')) {
-              document.getElementById('messengerBox').innerText += messageText;
+              document.getElementById('messenger').innerText += messageText;
             } else if (toAddress.includes('kirbyassan1@gmail.com')) {
-              document.getElementById('gmailBox').innerText += messageText;
+              document.getElementById('gmail').innerText += messageText;
             }
           } catch (error) {
             console.error('Error fetching message details:', error);
