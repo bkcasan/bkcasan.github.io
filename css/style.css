@@ -493,7 +493,77 @@ header.sticky{
     font-size: 24px; 
 }
 
+/* Admin Section Styling */
+#smsBox,
+#messengerBox,
+#gmailBox,
+#content {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
 
+#smsBox,
+#messengerBox,
+#gmailBox {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: #000000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#smsBox h3,
+#messengerBox h3,
+#gmailBox h3 {
+  color: #007bff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#authorize_button,
+#signout_button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#authorize_button:hover,
+#signout_button:hover {
+  background-color: #2980b9;
+}
+
+/* Additional styling for the admin login section */
+#content {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Center the entire section */
+.contact {
+  text-align: center;
+}
+
+/* Style the "Admin Login" text */
+.contact p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
 /* Show the text on hover */
 .portfolio-item:hover .main-row {
