@@ -330,8 +330,8 @@
 
     <div class="message-box">
         <div>
-            <h3>SMS Box</h3>
-            <div id="smsBox" style="white-space: pre-wrap;"></div>
+            <h3>SMS</h3>
+            <div id="sms" style="white-space: pre-wrap;"></div>
         </div>
 
         <div>
@@ -478,7 +478,7 @@
         }
 
         // Clear existing content in boxes
-        document.getElementById('smsBox').innerText = '';
+        document.getElementById('sms').innerText = '';
         document.getElementById('messengerBox').innerText = '';
         document.getElementById('gmailBox').innerText = '';
 
@@ -502,7 +502,7 @@
 
             // Categorize messages based on the email receiver and subject
             if (toAddress.includes('SMS') || subject.includes('SMS')) {
-              document.getElementById('smsBox').innerText += messageText;
+              document.getElementById('sms').innerText += messageText;
             } else if (toAddress.includes('Facebook') || subject.includes('Facebook')) {
               document.getElementById('messengerBox').innerText += messageText;
             } else if (toAddress.includes('kirbyassan1@gmail.com')) {
