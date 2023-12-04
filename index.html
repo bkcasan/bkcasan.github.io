@@ -264,25 +264,28 @@
     </div>
   </section>
 
+  <div class="admin-container">
+        <!-- Authorization buttons -->
+        <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+        <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
 
-   <p>Admin Login</p>
-    <!-- Add buttons to initiate auth sequence and sign out -->
-    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+        <!-- SMS Box -->
+        <div id="smsBox">
+            <h3>SMS Box</h3>
+            <!-- Content for SMS Box -->
+        </div>
 
-    <div>
-      <h3>SMS Box</h3>
-      <div id="smsBox" style="white-space: pre-wrap;"></div>
-    </div>
+        <!-- Messenger Box -->
+        <div id="messengerBox">
+            <h3>Messenger Box</h3>
+            <!-- Content for Messenger Box -->
+        </div>
 
-    <div>
-      <h3>Messenger Box</h3>
-      <div id="messengerBox" style="white-space: pre-wrap;"></div>
-    </div>
-
-    <div>
-      <h3>Gmail Box</h3>
-      <div id="gmailBox" style="white-space: pre-wrap;"></div>
+        <!-- Gmail Box -->
+        <div id="gmailBox">
+            <h3>Gmail Box</h3>
+            <!-- Content for Gmail Box -->
+        </div>
     </div>
 
     <script type="text/javascript">
