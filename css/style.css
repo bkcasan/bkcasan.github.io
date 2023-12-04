@@ -505,7 +505,8 @@ header.sticky{
     height: 300px;
     padding: 20px;
     margin: 10px;
-    background-color: rgb(61 70 74);
+    background: #415169;
+    background-color: rgb(54 71 78);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
