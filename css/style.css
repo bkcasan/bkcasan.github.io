@@ -493,8 +493,15 @@ header.sticky{
 
 /* Add or update these styles in admin-section.css */
 
+/* Container for the boxes */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+}
+
 .admin-box {
-    width: 300px;
+    width: 20%; /* Set width to 20% for 5 columns */
     height: 300px;
     padding: 20px;
     margin: 10px;
@@ -503,7 +510,7 @@ header.sticky{
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    position: left
+    position: relative; /* Use relative positioning */
 }
 
 .admin-box:hover {
@@ -513,7 +520,7 @@ header.sticky{
 /* Adjust responsive styles if needed */
 @media only screen and (max-width: 768px) {
     .admin-box {
-        width: 100%;
-        height: auto; /* Adjust as needed for responsive height */
+        width: 100%; /* Full width on smaller screens */
     }
 }
+
