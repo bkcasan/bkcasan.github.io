@@ -493,28 +493,66 @@ header.sticky{
 
 /* Add or update these styles in admin-section.css */
 
+/* Add or update these styles in admin-section.css */
+
 /* Container for the boxes */
 .box-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;/* Adjust as needed */
+    justify-content: space-between; /* Adjust as needed */
 }
 
 .admin-box {
-    width: 20%; /* Set width to 20% for 5 columns */
+    width: calc(20% - 40px); /* Calculate width to ensure 5 columns with margin */
     height: 300px;
-    padding: 20px;
-    margin: 10px;
-    background: #415169;
-    background-color: rgb(63 86 96);
-    border-radius: 8px;
+    padding: 40px;
+    margin: 20px; /* Add margin for spacing */
+    background: #2d343f;
+    border-radius: 28px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
     position: relative; /* Use relative positioning */
 }
 
 .admin-box:hover {
+    border: 1px solid var(--main-color);
     transform: translateY(-5px) scale(1.03);
+}
+
+/* Styles for the row containing "sms," "email," and "messenger" */
+.admin-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Styles for the buttons row */
+.admin-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.authorize-btn,
+.sign-out-btn {
+    width: 48%; /* Adjust as needed */
+    padding: 15px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.authorize-btn:hover,
+.sign-out-btn:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
 }
 
 /* Adjust responsive styles if needed */
@@ -522,5 +560,14 @@ header.sticky{
     .admin-box {
         width: 100%; /* Full width on smaller screens */
     }
-}
 
+    .admin-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+    }
+
+    .authorize-btn,
+    .sign-out-btn {
+        width: 100%; /* Full width for buttons on smaller screens */
+        margin-top: 10px; /* Add margin between buttons on smaller screens */
+    }
+}
