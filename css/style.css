@@ -510,6 +510,20 @@ header.sticky{
   justify-content: space-between;
 }
 
+#smsBox,
+#messengerBox,
+#gmailBox {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  padding: 15px;
+  border-radius: 8px;
+  color: #000000;
+  margin: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
 #smsBox h3,
 #messengerBox h3,
 #gmailBox h3 {
@@ -529,6 +543,11 @@ header.sticky{
   border: none;
   cursor: pointer;
   border-radius: 5px;
+}
+
+#authorize_button:hover,
+#signout_button:hover {
+  background-color: #2980b9;
 }
 
 /* Additional styling for the admin login section */
@@ -556,23 +575,4 @@ header.sticky{
 #authorize_button:hover,
 #signout_button:hover {
   background-color: #2980b9;
-}
-
-.admin-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-#authorize_button, #signout_button {
-    margin-bottom: 10px;
-}
-
-#smsBox, #messengerBox, #gmailBox {
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
 }
