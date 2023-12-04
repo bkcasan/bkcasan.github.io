@@ -521,11 +521,6 @@ header.sticky{
   background-color: #f9f9f9;
 }
 
-.admin-boxes {
-  display: flex;
-  justify-content: space-between;
-}
-
 #smsBox,
 #messengerBox,
 #gmailBox {
@@ -565,26 +560,4 @@ header.sticky{
 #signout_button:hover {
   background-color: #2980b9;
 }
-
-/* Additional styling for the admin login section */
-#content {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-/* Center the entire section */
-.contact {
-  text-align: center;
-}
-
-/* Style the "Admin Login" text */
-.contact p {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 
