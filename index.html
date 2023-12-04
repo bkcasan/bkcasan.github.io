@@ -264,22 +264,25 @@
     </div>
   </section>
 
- <p>Admin Login</p>
+<p>Admin Login</p>
     <!-- Add buttons to initiate auth sequence and sign out -->
     <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
     <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
 
-   <div id="smsBox" style="white-space: pre-wrap; display: flex; flex-wrap: nowrap; justify-content: space-between;">
-    <div style="width: 30%; box-sizing: border-box; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px;">
-        <!-- Content goes here -->
+    <div>
+      <h3>SMS Box</h3>
+      <div id="smsBox" style="white-space: pre-wrap;"></div>
     </div>
-    <div style="width: 30%; box-sizing: border-box; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px;">
-        <!-- Content goes here -->
+
+    <div>
+      <h3>Messenger Box</h3>
+      <div id="messengerBox" style="white-space: pre-wrap;"></div>
     </div>
-    <div style="width: 30%; box-sizing: border-box; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px;">
-        <!-- Content goes here -->
+
+    <div>
+      <h3>Gmail Box</h3>
+      <div id="gmailBox" style="white-space: pre-wrap;"></div>
     </div>
-</div>
 
 <div id="messengerBox" style="white-space: pre-wrap; display: flex; flex-wrap: nowrap; justify-content: space-between;">
     <!-- Similar inline styles as above for one-row, three-column layout -->
