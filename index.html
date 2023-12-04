@@ -267,6 +267,8 @@
  <style>
      
     .admin-container {
+            font-size: 24px;
+            font-weight: 700;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -275,16 +277,7 @@
             border-radius: 8px;
             box-shadow: 0 0 20px var(--main-color); /* Use your existing box shadow */
         }
-     
-     .admin-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--main-color);
-            margin-bottom: 20px;
-            /* Additional styles for the .admin-title class */
-            text-transform: uppercase;
-            letter-spacing: 2px;
-         
+
         .auth-buttons {
             display: flex;
             gap: 10px;
@@ -329,14 +322,20 @@
             color: var(--main-color); /* Use your existing main color */
             margin-bottom: 10px;
         }
+        .admin-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--main-color);
+            margin-bottom: 20px;
+        }
     </style>
 
 <div class="admin-container">
-        <p class="admin-title">ADMIN LOGIN</p>
-        <div class="auth-buttons">
-            <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-            <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
-        </div>
+    <p>ADMIN LOGIN</p>
+    <div class="auth-buttons">
+        <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+        <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+    </div>
 
     <div class="message-box">
         <div>
