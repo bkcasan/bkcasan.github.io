@@ -264,30 +264,35 @@
     </div>
   </section>
 
-  <div class="admin-container">
-        <!-- Authorization buttons -->
+  <!-- Admin Section -->
+<div class="admin-container">
+    <!-- Authorization buttons -->
+    <div class="auth-buttons">
         <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
         <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+    </div>
 
+    <!-- Messages Boxes Container -->
+    <div class="messages-container">
         <!-- SMS Box -->
-        <div id="smsBox">
+        <div id="smsBox" class="message-box">
             <h3>SMS Box</h3>
             <!-- Content for SMS Box -->
         </div>
 
         <!-- Messenger Box -->
-        <div id="messengerBox">
+        <div id="messengerBox" class="message-box">
             <h3>Messenger Box</h3>
             <!-- Content for Messenger Box -->
         </div>
 
         <!-- Gmail Box -->
-        <div id="gmailBox">
+        <div id="gmailBox" class="message-box">
             <h3>Gmail Box</h3>
             <!-- Content for Gmail Box -->
         </div>
     </div>
-
+</div>
     <script type="text/javascript">
       /* exported gapiLoaded */
       /* exported gisLoaded */
