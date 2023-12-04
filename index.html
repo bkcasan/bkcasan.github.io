@@ -264,33 +264,62 @@
     </div>
   </section>
 
-<p>Admin Login</p>
-    <!-- Add buttons to initiate auth sequence and sign out -->
-    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+<style>
+    .admin-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
 
-    <div>
-      <h3>SMS Box</h3>
-      <div id="smsBox" style="white-space: pre-wrap;"></div>
+    .auth-buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .message-box {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow wrapping if the boxes don't fit in one row */
+    }
+
+    .message-box > div {
+        width: 300px; /* Adjust the width as needed */
+        max-width: 100%; /* Allow boxes to take full width on smaller screens */
+        text-align: center; /* Center text within each box */
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+
+<div class="admin-container">
+    <p>Admin Login</p>
+    <div class="auth-buttons">
+        <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+        <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
     </div>
 
-    <div>
-      <h3>Messenger Box</h3>
-      <div id="messengerBox" style="white-space: pre-wrap;"></div>
-    </div>
+    <div class="message-box">
+        <div>
+            <h3>SMS Box</h3>
+            <div id="smsBox" style="white-space: pre-wrap;"></div>
+        </div>
 
-    <div>
-      <h3>Gmail Box</h3>
-      <div id="gmailBox" style="white-space: pre-wrap;"></div>
-    </div>
+        <div>
+            <h3>Messenger Box</h3>
+            <div id="messengerBox" style="white-space: pre-wrap;"></div>
+        </div>
 
-<div id="messengerBox" style="white-space: pre-wrap; display: flex; flex-wrap: nowrap; justify-content: space-between;">
-    <!-- Similar inline styles as above for one-row, three-column layout -->
+        <div>
+            <h3>Gmail Box</h3>
+            <div id="gmailBox" style="white-space: pre-wrap;"></div>
+        </div>
+    </div>
 </div>
 
-<div id="gmailBox" style="white-space: pre-wrap; display: flex; flex-wrap: nowrap; justify-content: space-between;">
-    <!-- Similar inline styles as above for one-row, three-column layout -->
-</div>
 
     <script type="text/javascript">
       /* exported gapiLoaded */
