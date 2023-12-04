@@ -493,21 +493,17 @@ header.sticky{
     font-size: 24px; 
 }
 
-/* Admin Section Styling */
 #smsBox,
 #messengerBox,
-#gmailBox,
-#content {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.admin-boxes {
-  display: flex;
-  justify-content: space-between;
+#gmailBox {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: #000000; /* Set text color to black */
+  max-height: 300px; /* Set a fixed height for the boxes */
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
 }
 
 #smsBox h3,
@@ -518,6 +514,7 @@ header.sticky{
   margin-bottom: 10px;
 }
 
+/* Center and style admin login section */
 #authorize_button,
 #signout_button {
   display: block;
@@ -529,6 +526,21 @@ header.sticky{
   border: none;
   cursor: pointer;
   border-radius: 5px;
+}
+
+#authorize_button:hover,
+#signout_button:hover {
+  background-color: #2980b9;
+}
+
+#smsBox,
+#messengerBox,
+#gmailBox {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 /* Additional styling for the admin login section */
@@ -551,21 +563,3 @@ header.sticky{
   font-weight: bold;
   margin-bottom: 10px;
 }
-
-.admin-boxes {
-  display: flex;
-  justify-content: space-between; /* Adjust as needed for spacing */
-}
-
-#smsBox,
-#messengerBox,
-#gmailBox,
-#content {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  justify-content: space-between;
-}
-
