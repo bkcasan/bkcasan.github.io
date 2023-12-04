@@ -265,60 +265,26 @@
   </section>
 
 
- <!-- Updated Communication Section -->
-<div class="box-container">
-    <div class="message-box" id="sms-box">
-        <!-- SMS Box Content -->
-        <h3>SMS Messages</h3>
-        <div id="smsBox" class="message-content" style="white-space: pre-wrap;"></div>
+ <p>Admin Login</p>
+    <!-- Add buttons to initiate auth sequence and sign out -->
+    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+
+    <div>
+      <h3>SMS Box</h3>
+      <div id="smsBox" style="white-space: pre-wrap;"></div>
     </div>
 
-    <div class="message-box" id="messenger-box">
-        <!-- Messenger Box Content -->
-        <h3>Messenger Messages</h3>
-        <div id="messengerBox" class="message-content" style="white-space: pre-wrap;"></div>
+    <div>
+      <h3>Messenger Box</h3>
+      <div id="messengerBox" style="white-space: pre-wrap;"></div>
     </div>
 
-    <div class="message-box" id="email-box">
-        <!-- Email Box Content -->
-        <h3>Email Messages</h3>
-        <div id="emailBox" class="message-content" style="white-space: pre-wrap;"></div>
+    <div>
+      <h3>Gmail Box</h3>
+      <div id="gmailBox" style="white-space: pre-wrap;"></div>
     </div>
 
-    <!-- Authorize and Signout Buttons -->
-    <div class="admin-box" id="authorize-signout-box">
-        <h3>Authorization</h3>
-        <button id="authorize_button" class="h-btn" onclick="handleAuthClick()">Authorize</button>
-        <button id="signout_button" class="h-btn btn3" onclick="handleSignoutClick()">Sign Out</button>
-    </div>
-</div>
-<!-- New Communication Section -->
-   <div class="box-container">
-    <div class="admin-box" id="sms-box">
-        <!-- SMS Box Content -->
-        <h3>SMS Box</h3>
-        <div id="smsBox" style="white-space: pre-wrap;"></div>
-    </div>
-
-    <div class="admin-box" id="messenger-box">
-        <!-- Messenger Box Content -->
-        <h3>Messenger Box</h3>
-        <div id="messengerBox" style="white-space: pre-wrap;"></div>
-    </div>
-
-    <div class="admin-box" id="gmail-box">
-        <!-- Gmail Box Content -->
-        <h3>Gmail Box</h3>
-        <div id="gmailBox" style="white-space: pre-wrap;"></div>
-    </div>
-
-    <!-- Authorize and Signout Buttons -->
-    <div class="admin-box" id="authorize-signout-box">
-        <h3>Authorization</h3>
-        <button id="authorize_button" class="h-btn" onclick="handleAuthClick()">Authorize</button>
-        <button id="signout_button" class="h-btn btn3" onclick="handleSignoutClick()">Sign Out</button>
-    </div>
-</div>
     <script type="text/javascript">
       /* exported gapiLoaded */
       /* exported gisLoaded */
@@ -326,8 +292,8 @@
       /* exported handleSignoutClick */
 
       // TODO(developer): Set to client ID and API key from the Developer Console
-      const CLIENT_ID = '836092072011-e5boj99cf2maecg0a14ma0i0fbtv3820.apps.googleusercontent.com';
-      const API_KEY = 'AIzaSyAn6cQ56aq8PD3WnRb9jw4AHVKfJBD9P8A';
+      const CLIENT_ID = '875686901556-uvt0ne8kmmfpgskqfusi9j9i3gab0o8t.apps.googleusercontent.com';
+      const API_KEY = 'AIzaSyDuQWe1C0K42LhKUhpJFuixlLYFak4mq-k';
 
       // Discovery doc URL for APIs used by the quickstart
       const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest';
@@ -430,37 +396,36 @@
       // ... (unchanged code)
 
       /**
-     /**
- * Print messages in the authorized user's inbox and categorize them into different boxes.
- */
-async function listMessages() {
-    let response;
-    try {
-        response = await gapi.client.gmail.users.messages.list({
+       * Print messages in the authorized user's inbox and categorize them into different boxes.
+       */
+      async function listMessages() {
+        let response;
+        try {
+          response = await gapi.client.gmail.users.messages.list({
             'userId': 'me',
             'maxResults': 10, // Adjust as needed
-        });
-    } catch (err) {
-        document.getElementById('content').innerText = err.message;
-        return;
-    }
-    const messages = response.result.messages;
-    if (!messages || messages.length === 0) {
-        document.getElementById('content').innerText = 'No messages found.';
-        return;
-    }
+          });
+        } catch (err) {
+          document.getElementById('content').innerText = err.message;
+          return;
+        }
+        const messages = response.result.messages;
+        if (!messages || messages.length === 0) {
+          document.getElementById('content').innerText = 'No messages found.';
+          return;
+        }
 
-    // Clear existing content in boxes
-    document.getElementById('smsBox').innerText = '';
-    document.getElementById('messengerBox').innerText = '';
-    document.getElementById('gmailBox').innerText = '';
+        // Clear existing content in boxes
+        document.getElementById('smsBox').innerText = '';
+        document.getElementById('messengerBox').innerText = '';
+        document.getElementById('gmailBox').innerText = '';
 
-    // Fetch and display message content
-    for (const message of messages) {
-        try {
+        // Fetch and display message content
+        for (const message of messages) {
+          try {
             const messageDetails = await gapi.client.gmail.users.messages.get({
-                'userId': 'me',
-                'id': message.id,
+              'userId': 'me',
+              'id': message.id,
             });
 
             const fromHeader = messageDetails.result.payload.headers.find(header => header.name === 'From');
@@ -475,21 +440,22 @@ async function listMessages() {
 
             // Categorize messages based on the email receiver and subject
             if (toAddress.includes('SMS') || subject.includes('SMS')) {
-                document.getElementById('smsBox').innerText += messageText;
+              document.getElementById('smsBox').innerText += messageText;
             } else if (toAddress.includes('Facebook') || subject.includes('Facebook')) {
-                document.getElementById('messengerBox').innerText += messageText;
+              document.getElementById('messengerBox').innerText += messageText;
             } else if (toAddress.includes('yasmienjengayao@gmail.com')) {
-                document.getElementById('gmailBox').innerText += messageText;
+              document.getElementById('gmailBox').innerText += messageText;
             }
-        } catch (error) {
+          } catch (error) {
             console.error('Error fetching message details:', error);
+          }
         }
-    }
-}
-
+      }
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
     <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+
+  </main><!-- End #main -->
 
     
 <!-- Add this script tag to your HTML, preferably just before the closing </body> tag -->
